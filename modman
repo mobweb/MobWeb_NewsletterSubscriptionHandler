@@ -1,0 +1,6 @@
+app/code/community/MobWeb/NewsletterSubscriptionHandler app/code/community/MobWeb/NewsletterSubscriptionHandler/
+
+app/etc/modules/MobWeb_NewsletterSubscriptionHandler.xml app/etc/modules/MobWeb_NewsletterSubscriptionHandler.xml
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"

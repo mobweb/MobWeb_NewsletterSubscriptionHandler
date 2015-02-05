@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MobWeb_NewsletterSubscriptionHandler>
+            <version>0.1.0</version>
+        </MobWeb_NewsletterSubscriptionHandler>
+    </modules>
+    <global>
+        <models>
+            <newslettersubscriptionhandler>
+                <class>MobWeb_NewsletterSubscriptionHandler_Model</class>
+            </newslettersubscriptionhandler>
+        </models>
+        <helpers>
+            <newslettersubscriptionhandler>
+                <class>MobWeb_NewsletterSubscriptionHandler_Helper</class>
+            </newslettersubscriptionhandler>
+        </helpers>
+        <events>
+            <newsletter_subscriber_save_after>
+                <observers>
+                    <newslettersubscriptionhandler>
+                        <type>singleton</type>
+                        <class>newslettersubscriptionhandler/observer</class>
+                        <method>newsletterSubscriberSaveAfter</method>
+                    </newslettersubscriptionhandler>
+                </observers>
+            </newsletter_subscriber_save_after>
+        </events>
+    </global>
+ </config>
